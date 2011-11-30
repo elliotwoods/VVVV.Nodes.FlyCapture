@@ -55,14 +55,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Emgu.CV, Version=2.3.0.1416, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Emgu\emgucv-windows-x86 2.3.0.1416\bin\Emgu.CV.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Emgu.Util, Version=2.3.0.1416, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Emgu\emgucv-windows-x86 2.3.0.1416\bin\Emgu.Util.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="FlyCapture2Managed">
       <HintPath>..\..\..\Program Files (x86)\Point Grey Research\FlyCapture2\bin\FlyCapture2Managed.dll</HintPath>
     </Reference>
@@ -91,6 +83,9 @@
       <HintPath>..\..\..\vvvv\vvvv_45beta26\bin\managed\VVVV.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="VVVV.Nodes.EmguCV">
+      <HintPath>..\VVVV.Nodes.EmguCV\Package\Plugins\VVVV.Nodes.EmguCV.dll</HintPath>
+    </Reference>
     <Reference Include="VVVV.PluginInterfaces">
       <HintPath>..\..\..\vvvv\vvvv_45beta26\bin\managed\VVVV.PluginInterfaces.dll</HintPath>
       <Private>False</Private>
@@ -105,7 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlyCapture\Utils.cs" />
     <Compile Include="FlyCapture\Context.cs" />
+    <Compile Include="FlyCapture\CaptureNode.cs" />
     <Compile Include="FlyCapture\InfoNode.cs" />
     <Compile Include="FlyCapture\ListCameraNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,13 +126,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\VVVV.Nodes.EmguCV\VVVV.Nodes.KC.EmguCV.csproj">
-      <Project>{E9A7FC26-34E0-4C1E-83D8-C01A169422B2}</Project>
-      <Name>VVVV.Nodes.KC.EmguCV</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />

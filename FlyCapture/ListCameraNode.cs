@@ -14,8 +14,6 @@ using System.Collections.Generic;
 
 using FlyCapture2;
 using FlyCapture2Managed;
-using Emgu.CV;
-using Emgu.CV.Structure;
 
 using VVVV.Nodes.EmguCV;
 
@@ -38,6 +36,8 @@ namespace VVVV.Nodes.FlyCapture
 		[Output("Info")]
 		ISpread<CameraInfo> FPinOutInfo;
 
+		[Output("Count", IsSingle=true)]
+		ISpread<int> FPinOutCount;
 		[Import]
 		ILogger FLogger;
 
@@ -73,6 +73,7 @@ namespace VVVV.Nodes.FlyCapture
 
 			FPinOutGUID.SliceCount = nDevices;
 			FPinOutInfo.SliceCount = nDevices;
+			FPinOutCount[0] = nDevices;
 
 			for (int i = 0; i < nDevices; i++)
 			{
@@ -85,6 +86,7 @@ namespace VVVV.Nodes.FlyCapture
 				cam.Disconnect();
 			}
 
+			
 			cam.Dispose();
 		}
 	}

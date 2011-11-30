@@ -14,8 +14,6 @@ using System.Collections.Generic;
 
 using FlyCapture2;
 using FlyCapture2Managed;
-using Emgu.CV;
-using Emgu.CV.Structure;
 
 using VVVV.Nodes.EmguCV;
 
