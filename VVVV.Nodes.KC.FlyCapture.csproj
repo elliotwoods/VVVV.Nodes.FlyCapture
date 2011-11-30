@@ -8,8 +8,8 @@
     <ProjectGuid>{B7E90183-C1CD-45A5-A99B-3273DEE66201}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VVVV.Nodes.EmguCV</RootNamespace>
-    <AssemblyName>VVVV.Nodes.OpenNI</AssemblyName>
+    <RootNamespace>VVVV.Nodes.FlyCapture</RootNamespace>
+    <AssemblyName>VVVV.Nodes.FlyCapture</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -42,6 +42,7 @@
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -62,8 +63,8 @@
       <HintPath>..\..\..\Emgu\emgucv-windows-x86 2.3.0.1416\bin\Emgu.Util.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="OpenNI.Net, Version=1.3.2.3, Culture=neutral, PublicKeyToken=6b43d0c6cf74ee7f, processorArchitecture=x86">
-      <HintPath>..\..\..\Program Files (x86)\OpenNI\Bin\OpenNI.Net.dll</HintPath>
+    <Reference Include="FlyCapture2Managed">
+      <HintPath>..\..\..\Program Files (x86)\Point Grey Research\FlyCapture2\bin\FlyCapture2Managed.dll</HintPath>
     </Reference>
     <Reference Include="SlimDX, Version=2.0.11.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
       <HintPath>..\..\..\vvvv\vvvv_45beta26\bin\managed\SlimDX.dll</HintPath>
@@ -104,9 +105,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlyCapture\ContextNode.cs" />
-    <Compile Include="FlyCapture\ImageNode.cs" />
-    <Compile Include="FlyCapture\UserNode.cs" />
+    <Compile Include="FlyCapture\Context.cs" />
+    <Compile Include="FlyCapture\InfoNode.cs" />
+    <Compile Include="FlyCapture\ListCameraNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,14 +131,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="readme" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\VVVV.Nodes.EmguCV\VVVV.Nodes.KC.EmguCV.csproj">
       <Project>{E9A7FC26-34E0-4C1E-83D8-C01A169422B2}</Project>
       <Name>VVVV.Nodes.KC.EmguCV</Name>
       <Private>False</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
