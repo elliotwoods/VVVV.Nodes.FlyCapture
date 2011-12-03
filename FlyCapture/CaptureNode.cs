@@ -35,8 +35,8 @@ namespace VVVV.Nodes.FlyCapture
 			}
 		}
 
-		string FFramerate;
-		public string Framerate
+		float FFramerate;
+		public float Framerate
 		{
 			get
 			{
@@ -79,16 +79,18 @@ namespace VVVV.Nodes.FlyCapture
 			try
 			{
 				FCamera.Connect(FGuid);
-
 				VideoMode mode = new VideoMode();
 				FrameRate rate = new FrameRate();
 
 				FCamera.GetVideoModeAndFrameRate(ref mode, ref rate);
 				FMode = mode.ToString();
-				FFramerate = rate.ToString();
+				FFramerate = Utils.GetFramerate(rate);
+
 
 				FRunning = true;
 				FCamera.StartCapture(CaptureCallback);
+
+				Status = "OK";
 			}
 			catch(Exception e)
 			{
@@ -147,7 +149,7 @@ namespace VVVV.Nodes.FlyCapture
 		ISpread<string> FPinOutMode;
 
 		[Output("Framerate")]
-		ISpread<string> FPinOutFramerate;
+		ISpread<float> FPinOutFramerate;
 		
 		#endregion
 

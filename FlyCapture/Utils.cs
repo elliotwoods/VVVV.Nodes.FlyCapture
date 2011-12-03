@@ -27,5 +27,29 @@ namespace VVVV.Nodes.FlyCapture
 			}
 			throw (new Exception("Unsupported PixelFormat"));
 		}
+
+		static public float GetFramerate(FrameRate rate)
+		{
+			switch(rate)
+			{
+				case FrameRate.FrameRate240:
+					return 240f;
+				case FrameRate.FrameRate120:
+					return 120f;
+				case FrameRate.FrameRate60:
+					return 60f;
+				case FrameRate.FrameRate30:
+					return 30f;
+				case FrameRate.FrameRate15:
+					return 15f;
+				case FrameRate.FrameRate7_5:
+					return 7.5f;
+				case FrameRate.FrameRate3_75:
+					return 3.75f;
+				case FrameRate.FrameRate1_875:
+					return 1.875f;
+			}
+			return 0;
+		}
 	}
 }
