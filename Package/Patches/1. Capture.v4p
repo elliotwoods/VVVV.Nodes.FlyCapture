@@ -471,7 +471,7 @@
    </PIN>
    <BOUNDS left="810" top="3600" type="Box">
    </BOUNDS>
-   <BOUNDS type="Window" left="13350" top="4395" width="10590" height="8670">
+   <BOUNDS height="8670" left="13350" top="4395" type="Window" width="10590">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="32" dstpinname="Image" srcnodeid="25" srcpinname="Output">
@@ -481,7 +481,7 @@
    </BOUNDS>
    <BOUNDS height="4770" left="825" top="4860" type="Box" width="6150">
    </BOUNDS>
-   <BOUNDS height="15465" left="1125" top="135" type="Window" width="22365">
+   <BOUNDS height="9345" left="150" top="1890" type="Window" width="28860">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -507,13 +507,15 @@
    <NODE componentmode="InABox" id="35" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="2295" top="4050" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="2295" top="4050" type="Box" width="795">
+   <BOUNDS height="435" left="2295" top="4050" type="Box" width="750">
    </BOUNDS>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Framerate">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK dstnodeid="35" dstpinname="Y Input Value" srcnodeid="34" srcpinname="Framerate">
@@ -535,7 +537,7 @@
    <NODE componentmode="InABox" id="37" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="3300" top="4050" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="510" left="3300" top="4050" type="Box" width="375">
+   <BOUNDS height="435" left="3300" top="4050" type="Box" width="345">
    </BOUNDS>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -555,7 +557,7 @@
    <NODE componentmode="InABox" id="38" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="4320" top="4050" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="510" left="4320" top="4050" type="Box" width="645">
+   <BOUNDS height="435" left="4320" top="4050" type="Box" width="600">
    </BOUNDS>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -573,7 +575,7 @@
    <NODE componentmode="InABox" id="39" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="5340" top="4050" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="510" left="5340" top="4050" type="Box" width="645">
+   <BOUNDS height="435" left="5340" top="4050" type="Box" width="600">
    </BOUNDS>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -591,7 +593,7 @@
    <NODE componentmode="InABox" id="40" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="0" left="6345" top="4050" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="510" left="6345" top="4050" type="Box" width="690">
+   <BOUNDS height="435" left="6345" top="4050" type="Box" width="645">
    </BOUNDS>
    <PIN encoded="0" pinname="Default" slicecount="1" values="||">
    </PIN>

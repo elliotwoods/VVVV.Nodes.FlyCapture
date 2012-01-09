@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using FlyCapture2;
 using FlyCapture2Managed;
 
-using VVVV.Nodes.EmguCV;
+using VVVV.Nodes.OpenCV;
 
 #endregion usings
 
@@ -85,7 +85,6 @@ namespace VVVV.Nodes.FlyCapture
 				FCamera.GetVideoModeAndFrameRate(ref mode, ref rate);
 				FMode = mode.ToString();
 				FFramerate = Utils.GetFramerate(rate);
-
 
 				FRunning = true;
 				FCamera.StartCapture(CaptureCallback);

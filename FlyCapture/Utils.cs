@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using VVVV.Nodes.EmguCV;
+using VVVV.Nodes.OpenCV;
 using FlyCapture2Managed;
 
 namespace VVVV.Nodes.FlyCapture

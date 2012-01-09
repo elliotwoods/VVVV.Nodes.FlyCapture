@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using FlyCapture2;
 using FlyCapture2Managed;
 
-using VVVV.Nodes.EmguCV;
+using VVVV.Nodes.OpenCV;
 
 #endregion usings
 
